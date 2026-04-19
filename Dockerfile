@@ -1,10 +1,11 @@
-# Step 1: Build the app
-FROM gradle:8.5-jdk17 AS builder
+# Step 1: Build using project wrapper
+FROM eclipse-temurin:17-jdk AS builder
 WORKDIR /app
 COPY . .
-RUN gradle build -x test
+RUN chmod +x gradlew
+RUN ./gradlew build -x test
 
-# Step 2: Run the app
+# Step 2: Run app
 FROM eclipse-temurin:17-jdk
 WORKDIR /app
 COPY --from=builder /app/build/libs/*.jar app.jar
