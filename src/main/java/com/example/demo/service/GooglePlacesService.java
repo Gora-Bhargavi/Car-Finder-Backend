@@ -30,7 +30,7 @@ public class GooglePlacesService {
     private boolean placeDetailsEnabled;
 
     /** Limit extra Place Details calls (billing / latency). */
-    @Value("${app.places.details.max-dealers:15}")
+    @Value("${app.places.details.max-dealers:10}")
     private int maxPlaceDetails;
 
     public List<Dealer> getDealers(double lat, double lng) {
