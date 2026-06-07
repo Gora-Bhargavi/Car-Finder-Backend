@@ -85,7 +85,7 @@ public class GooglePlacesService {
                             .getJSONObject(0)
                             .getString("photo_reference");
                     String encodedRef = UriUtils.encodeQueryParam(photoRef, StandardCharsets.UTF_8);
-                    dealer.setImage("http://localhost:8080/api/dealers/photo?photoReference=" + encodedRef);
+                    dealer.setImage("/api/dealers/photo?photoReference=" + encodedRef);
                 }
 
                 dealer.setMapUrl("https://www.google.com/maps/search/?api=1&query=" + dlat + "," + dlng);
