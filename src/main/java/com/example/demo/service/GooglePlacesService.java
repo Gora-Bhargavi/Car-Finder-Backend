@@ -102,6 +102,8 @@ public class GooglePlacesService {
         return dealers;
     }
 
+    
+
     private void enrichFromPlaceDetails(RestTemplate restTemplate, Dealer dealer, String placeId) {
         try {
             String encodedId = UriUtils.encodeQueryParam(placeId, StandardCharsets.UTF_8);

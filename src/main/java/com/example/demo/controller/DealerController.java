@@ -14,7 +14,7 @@ import org.springframework.web.util.UriUtils;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
-@CrossOrigin(origins = {"http://localhost:3001", "http://localhost:3000"})
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/dealers")
 public class DealerController {
